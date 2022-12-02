@@ -66,16 +66,16 @@ class Matcher:
         if len(ref.args) != len(ex.args):
             return False
 
-        # for ref_arg, ex_arg in zip(list(ref.args), list(ex.args)):
-        #     if ref_arg != ex_arg:
-        #         return False
-
-        for i, head in enumerate(heads):
-            #sometimes '.' is identified as the syntactic head and we do not want to count these extractions as incorrect
-            if head == '.':
-                continue
-            if head not in ex.args[i]:
+        for ref_arg, ex_arg in zip(list(ref.args), list(ex.args)):
+            if ref_arg != ex_arg:
                 return False
+
+        # for i, head in enumerate(heads):
+        #     #sometimes '.' is identified as the syntactic head and we do not want to count these extractions as incorrect
+        #     if head == '.':
+        #         continue
+        #     if head not in ex.args[i]:
+        #         return False
 
         return True
 
