@@ -1,0 +1,61 @@
+{
+
+    "dataset_reader": {
+        "type": "bert_multi_view_oie",
+        "bert_model_name": "bert-base-uncased"
+      },
+
+    "validation_dataset_reader": {
+        "type": "bert_multi_view_oie",
+        "validation": true,
+        "bert_model_name": "bert-base-uncased"
+      },
+
+    "train_data_path": "data/lsoie_wiki_train.json",
+    "validation_data_path": "data/lsoie_wiki_test.json",
+
+    "iterator": {
+        "type": "bucket",
+        "batch_size": 16,
+        "biggest_batch_first": true,
+        "sorting_keys": [["tokens", "num_tokens"]]
+    },
+
+    "model": {
+        "type": "oie_bert_multi_view",
+        "embedding_dropout": 0.1,
+        "bert_model": "bert-base-uncased",
+        "hyper_div": 0.02,
+        "hyper_c1": 0.05,
+        "hyper_c2": 0.05,
+        "tuple_metric": {
+            "output_path": "",
+            "type": "exact_match",
+            "dev_set": "data/sentences/lsoie_wiki_test.txt"}
+    },
+
+    "trainer": {
+        "optimizer": {
+            "type": "bert_adam",
+            "lr": 5e-5,
+            "t_total": -1,
+            "max_grad_norm": 1.0,
+            "weight_decay": 0.01,
+            "parameter_groups": [
+              [["bias", "LayerNorm.bias", "LayerNorm.weight", "layer_norm.weight"], {"weight_decay": 0.0}]
+            ]
+        },
+
+        "learning_rate_scheduler": {
+            "type": "slanted_triangular",
+            "num_epochs": 5,
+            "num_steps_per_epoch": 4600
+        },
+        "num_epochs": 5,
+        "validation_metric": "+f1",
+        "num_serialized_models_to_keep": 1,
+        "should_log_learning_rate": true,
+        "cuda_device": 0
+    }
+
+}

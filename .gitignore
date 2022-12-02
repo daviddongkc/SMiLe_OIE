@@ -1,0 +1,14 @@
+.vscode
+**/__pycache__/**
+data/lsoie_sci_train.json
+data/lsoie_wiki_train.json
+dump
+*.pyc
+**/._*
+**/pkl_outputs
+STDIN.*
+jobs
+.ipynb_checkpoints
+.*.swp
+trained_model
+*.tar.gz
