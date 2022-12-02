@@ -12,3 +12,4 @@ jobs
 .*.swp
 trained_model
 *.tar.gz
+.idea
