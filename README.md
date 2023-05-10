@@ -33,15 +33,20 @@ Arguments:
 If you use this code in your research, please cite:
 
 ```
-@article{https://doi.org/10.48550/arxiv.2212.02068,
-  doi = {10.48550/ARXIV.2212.02068},
-  url = {https://arxiv.org/abs/2212.02068},
-  author = {Dong, Kuicai and Sun, Aixin and Kim, Jung-Jae and Li, Xiaoli},
-  keywords = {Computation and Language (cs.CL), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {Syntactic Multi-view Learning for Open Information Extraction},
-  publisher = {arXiv},
-  year = {2022},
-  copyright = {arXiv.org perpetual, non-exclusive license}
+@inproceedings{dong-etal-2022-syntactic,
+    title = "Syntactic Multi-view Learning for Open Information Extraction",
+    author = "Dong, Kuicai  and
+      Sun, Aixin  and
+      Kim, Jung-Jae  and
+      Li, Xiaoli",
+    booktitle = "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing",
+    month = dec,
+    year = "2022",
+    address = "Abu Dhabi, United Arab Emirates",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.emnlp-main.272",
+    pages = "4072--4083",
+    abstract = "Open Information Extraction (OpenIE) aims to extract relational tuples from open-domain sentences. Traditional rule-based or statistical models were developed based on syntactic structure of sentence, identified by syntactic parsers. However, previous neural OpenIE models under-explored the useful syntactic information. In this paper, we model both constituency and dependency trees into word-level graphs, and enable neural OpenIE to learn from the syntactic structures. To better fuse heterogeneous information from the two graphs, we adopt multi-view learning to capture multiple relationships from them. Finally, the finetuned constituency and dependency representations are aggregated with sentential semantic representations for tuple generation. Experiments show that both constituency and dependency information, and the multi-view learning are effective.",
 }
 
 
