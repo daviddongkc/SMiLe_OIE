@@ -1,7 +1,7 @@
 # Syntactic Multi-view Learning for Open Information Extraction
 
 ## Introduction
-SMiLe-OIE is the first neural OpenIE system that incorporates heterogeneous syntactic information through GCN encoders and multi-view learning. The details of this work are elaborated in our paper published in Main Conference of [EMNLP 2022](https://preview.aclanthology.org/emnlp-22-ingestion/2022.emnlp-main.272.pdf).
+SMiLe-OIE is the first neural OpenIE system that incorporates heterogeneous syntactic information through GCN encoders and multi-view learning. The details of this work are elaborated in our paper published in Main Conference of [EMNLP 2022](https://aclanthology.org/2022.emnlp-main.272/).
 
 ## Syntactic Graphs Construction
 To be uploaded soon in 
