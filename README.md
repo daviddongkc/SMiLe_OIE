@@ -4,8 +4,9 @@
 SMiLe-OIE is the first neural OpenIE system that incorporates heterogeneous syntactic information through GCN encoders and multi-view learning. The details of this work are elaborated in our paper published in Main Conference of [EMNLP 2022](https://aclanthology.org/2022.emnlp-main.272/).
 
 ## Syntactic Graphs Construction
-To be uploaded soon in 
+The code of data pre-pocessing is in 
 ```data\graph_construction```.
+You will need to construct the syntactic graphs first, before model training.
 
 ## SMiLe-OIE Model
 ### Installation Instructions
